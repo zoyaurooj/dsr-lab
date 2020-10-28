@@ -1,0 +1,14 @@
+install.packages("ggplot2")
+library(ggplot2)
+set.seed(100)
+x<-rnorm(100,mean=0,sd=1)
+x
+boxplot(x)
+
+x<-seq(2,50,2)
+x
+y<-seq(32,80,2)
+y
+dt<-as.data.frame(cbind(x,y))
+View(dt)
+ggplot()+geom_point(data=dt, aes(x=x,y=y),size=3, color="blue")
